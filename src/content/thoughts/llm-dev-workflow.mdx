@@ -1,0 +1,82 @@
+---
+# heroImage: '/public/favicon-192x192-simple.png'
+# heroImage: '../../assets/blog-placeholder-about.jpg'
+iconEmoji: '🤖'
+# iconHero: ''
+# page_description: ''
+page_title: 'integrating agent chat/search/suggest into development workflow'
+pubDate: 'May 15 2025'
+# updatedDate: ''
+# footnotes: []
+---
+import CodeBlock from '../../components/codeblock/CodeBlock';
+
+<section class="mb-8">Agents and LLMs can speed up a users output considerably
+over manual-only effort. Since every developer has preferences and different strengths,
+one needs to try a few different approaches to optimize for an AI assisted workflow.</section>
+
+
+### Season, Generate, Refine Approach
+<section class="mb-8">One approach for effective AI support workflows is separate phases of development that better
+suit manual vs automated code generation. This approach yields better success because the structure and goals are
+defined simply initially with scope constraints and only adding additional complexity for the AI at subsequent steps.
+Finally a manual review/refinement is executed to tighten up areas and polish the execution.</section>
+
+<section>
+  <ul class="list-inside">
+    <li class="mb-8">
+      <ul class="list-inside">
+        <li>⟡ Season</li>
+        <li>Create a simple UI using static test data.</li>
+        <li>
+          <CodeBlock
+            title={`Example UI Prompt`} 
+            code={`Create a clothing inventory search result screen in React using static data
+            for image thumbnail, brand, product title, price and like icon floated at the top
+            left of thumbnail. Include a filter row above item list with dropdowns for clothing
+            category, style, size, color and link to show more filters. Align to the right of
+            the filter options a dropdown for result sort type.`}
+            thumbnail="/blog/blog-llm-dev-01-thumb.jpg"
+            client:only="react" />
+        </li>
+      </ul>
+    </li>
+    <li class="mb-8">
+      <ul class="list-inside">
+        <li>⟡ Generate</li>
+        <li>Create a data structure matching the working model.</li>
+        <li class="mb-8">
+          <CodeBlock
+            title={`Example Data Structure Prompt`} 
+            code={`Based on the clothing inventory search result screen, create a data model for
+            items and item categories. Then generate SQL commands to set up a Supabase database
+            to store this data.`}
+            client:only="react" />
+        </li>
+        <li>Build a backend to facilitate relational and CRUD operations.</li>
+        <li>
+          <CodeBlock
+            title={`Example API Prompt`} 
+            code={`Based on the created data model for items and item categories, create a node js
+            and expressjs API to facilitate relational and CRUD operations to a postgresql
+            database and allow wiring to the React Router UI created in our previous steps.`}
+            client:only="react" />
+        </li>
+      </ul>
+    </li>
+    <li class="mb-8">
+      <ul class="list-inside">
+        <li>⟡ Refine</li>
+        <li>Improve UI/UX design and interactions.</li>
+        <li>Add validation to user input.</li>
+        <li>Add basic code coverage.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>This method is by no means plug-and-play and will require re-prompting to yield
+the desired results. Additionally crafting the best prompts will require knowledge
+of the frameworks and best practices keep the agent solution true to your request.
+This will however allow you to create simple functional starting points at least
+twice as fast if not more. This is a skill that will come to be expected just as
+using search engines or reference books has been in the past.</section>

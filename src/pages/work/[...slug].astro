@@ -1,0 +1,27 @@
+---
+import { type CollectionEntry, getCollection, getEntry } from 'astro:content';
+import { render } from 'astro:content';
+import CmsLayout from '../../layouts/CmsLayout.astro';
+import WorkDetailPartial from '../../layouts/WorkDetailPartial.astro';
+
+const params = Astro.params;
+const post = Astro.props;
+type Props = CollectionEntry<'workDetails'>;
+
+export async function getStaticPaths() {
+	const posts = await getCollection('workDetails');
+
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post
+	}));
+}
+
+const { Content } = await render(post);
+const relatedData = await getEntry('works', params.slug);
+---
+
+<CmsLayout page_title={'Work Detail'}>
+  <WorkDetailPartial relatedData={relatedData?.data} tagList={post.data.tags} />
+  <Content />
+</CmsLayout>

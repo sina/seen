@@ -1,0 +1,16 @@
+/* TagList */
+.tag-list {
+  display: flex;
+}
+
+.tag-list li {
+  background-color: var(--color-steel-blue-faded);
+  border: 1px solid ;
+  border-radius: 5px;
+  color: var(--color-gray);
+  font-size: .7em;
+  margin: 4px;
+  opacity: .5;
+  padding: 0 4px;
+  text-transform: uppercase;
+}

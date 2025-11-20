@@ -1,0 +1,56 @@
+{
+  "name": "[seen-blog] node-ts-astro/debian_12_bookworm_slim",
+  "dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+  "remoteUser": "${localEnv:USER_NAME}",
+	"workspaceFolder": "/home/node/dev-project",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/config/.bashrc,target=/home/node/.bashrc,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "astro-build.astro-vscode",
+        "unifiedjs.vscode-mdx",
+        "usernamehw.errorlens",
+        "bradlc.vscode-tailwindcss"
+      ],
+      "settings": {
+        "launch": {
+          "version": "0.2.0",
+          "configurations": [
+            {
+              "command": "./node_modules/.bin/astro dev",
+              "name": "Development server",
+              "request": "launch",
+              "type": "node-terminal"
+            },
+            {
+              "command": "pnpm dev-host",
+              "name": "Dev-host",
+              "request": "launch",
+              "type": "node-terminal"
+            }
+          ]
+        }
+      }
+    }
+  }
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// This can be used to network with other containers or with the host.
+	//,"forwardPorts": [4321]
+
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

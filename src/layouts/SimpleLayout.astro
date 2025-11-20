@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { page_title } = Astro.props;
+---
+
+<BaseLayout page_title={page_title}>
+  <main class="m-auto py-12 px-4 w-[960px] max-w-[calc(100%-2em)] min-h-[85vh]">
+    <slot />
+  </main>
+</BaseLayout>

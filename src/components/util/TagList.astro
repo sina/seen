@@ -1,0 +1,20 @@
+---
+type Tags = {
+  label: string,
+  link?: string
+};
+
+type Props = {
+  items: Array<Tags>
+};
+
+const { items } = Astro.props;
+import './style/util.css';
+---
+<ul class="tag-list">
+  {
+    items.map((entry, index: number) => (
+      <li>{entry.label}</li>
+    ))
+  }
+</ul>

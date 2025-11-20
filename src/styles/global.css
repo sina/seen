@@ -1,0 +1,536 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+@import "tailwindcss";
+
+@theme {
+  --beige: 246, 238, 227;
+  --beige-alt: 116, 125, 124;
+  --black: 15, 18, 25;
+  --gray: 96, 115, 159;
+  --gray-blue: 89, 111, 124;
+  --gray-brown: 63, 56, 50;
+  --gray-dark: 34, 41, 57;
+  --gray-light: 229, 233, 240;
+  --light-steel-blue: 176, 196, 222;
+  --red-cherry: 210, 4, 45;
+  --steel-blue: 70, 130, 180;
+  --white: 255, 255, 255;
+  --yellow-spandex: 237, 194, 88;
+  --color-beige: rgb(var(--beige));
+  --color-beige-alt: rgb(var(--beige-alt));
+  --color-beige-alt-5%: rgba(var(--beige-alt), 5%);
+  --color-gray: rgb(var(--gray));
+  --color-gray-blue: rgb(var(--gray-blue));
+  --color-gray-brown: rgb(var(--gray-brown));
+  --color-gray-brown-light: rgba(var(--gray-brown), 50%);
+  --color-gray-dark: rgb(var(--gray-dark));
+  --color-gray-light: rgb(var(--gray-light));
+  --color-light-steel-blue: rgb(var(--light-steel-blue));
+  --color-light-steel-blue-faded: rgba(var(--light-steel-blue), 15%);
+  --color-red-cherry: rgb(var(--red-cherry));
+  --color-steel-blue: rgb(var(--steel-blue));
+  --color-steel-blue-faded: rgba(var(--steel-blue), 10%);
+  --color-yellow-spandex: rgb(var(--yellow-spandex));
+  
+  /* egg scheme related */
+  --color-capcom-blue: rgb(19, 82, 164);
+  --color-capcom-yellow: rgb(250, 209, 60);
+  --color-gyruss-orange: rgb(217, 107, 47);
+  --color-mario-red: rgb(238, 52, 49);
+  --color-mario-white: rgb(249, 250, 253);
+  --color-mgs-gray: rgb(49, 85, 89);
+  --color-mgs-stone-blue: rgb(16, 34, 37);
+  --color-twinbee-blue: rgb(119, 185, 248);
+  --color-twinbee-pink: rgb(244, 138, 178);
+  --color-zelda-gold: rgb(242, 204, 133);
+  --color-zelda-green: rgb(144, 175, 83);
+  --gradient-gyruss-space:
+    circle at bottom, 
+      rgb(5, 5, 58) 0%,
+      rgb(36, 33, 49) 40%,
+      rgb(15, 23, 42) 60%,
+      rgb(9, 20, 37) 80%,
+      rgb(0, 0, 0) 100%;
+
+  --gradient-beige: rgba(var(--beige), 50%), #fff;
+  --gradient-beige-alt: rgba(var(--beige-alt), 5%), rgb(255, 255, 255);
+  --gradient-gray-brown: rgba(var(--gray-brown), 50%), #fff;
+  --gradient-white-brown: rgba(var(--white), 50%), rgba(var(--gray-brown), 50%);
+
+  /* custom animations */
+  --animate-pulse: fadepulse 2.5s linear infinite;
+}
+
+@font-face {
+	font-family: 'Atkinson';
+	font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+	src: url('/fonts/atkinson-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Atkinson';
+  font-display: swap;
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/atkinson-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'engplot';
+  font-display: swap;
+	font-style: normal;
+	font-weight: normal;
+	src: url('/fonts/engplot.woff') format('woff');
+}
+
+body {
+  background: linear-gradient(var(--gradient-beige)) no-repeat;
+  background-size: 100% 600px;
+  color: rgb(var(--gray-dark));
+	font-family: 'Atkinson', sans-serif;
+	line-height: 1.7;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: rgb(var(--black));
+	line-height: 1.2;
+	margin: 0 0 0.5rem 0;
+}
+
+h1 {
+	font-size: 3.052em;
+}
+
+h2 {
+	font-size: 2.441em;
+}
+
+h3 {
+	font-size: 1.953em;
+}
+
+h4 {
+	font-size: 1.563em;
+}
+
+h5 {
+	font-size: 1.25em;
+}
+
+a {
+	color: var(--color-gray-brown);
+}
+
+table {
+	width: 100%;
+}
+
+img {
+	border-radius: 8px;
+  height: auto;
+  max-width: 100%;
+}
+
+code {
+	background-color: rgb(var(--gray-light));
+	border-radius: 2px;
+  padding: 2px 5px;
+}
+
+.emoji-filter-bw {
+  filter: sepia(1) hue-rotate(-50deg) saturate(0);
+}
+
+.emoji-filter-blue {
+  filter: sepia(1) hue-rotate(-165deg) saturate(2);
+}
+
+.emoji-filter-green {
+  filter: sepia(1) hue-rotate(32deg) saturate(1);
+}
+
+.emoji-filter-orange {
+  filter: sepia(1) hue-rotate(-48deg) saturate(4);
+}
+
+.emoji-filter-red {
+  filter: sepia(1) hue-rotate(-57deg) saturate(3);
+}
+
+.emoji-filter-yellow {
+  filter: sepia(1) hue-rotate(-15deg) saturate(3);
+}
+
+.filter-shadow {
+  filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 18px;
+	}
+
+	main {
+		padding: 1em;
+	}
+
+  header .social-links {
+    display: none;
+  }
+
+  ul {
+    gap: 0.5em;
+  }
+
+  ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  ul li:first-child {
+    margin-bottom: 0;
+  }
+
+  ul li:first-child .title {
+    font-size: 1.563em;
+  }
+
+  /* thoughts */
+  .thought-title {
+    max-width: 55%;
+  }
+
+  .common-icon {
+    top: 0 !important;
+  }
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+	clip: rect(1px 1px 1px 1px);
+	/* maybe deprecated but we need to support legacy browsers */
+	clip: rect(1px, 1px, 1px, 1px);
+	/* modern browsers, clip-path works inwards from each corner */
+	clip-path: inset(50%);
+	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+	white-space: nowrap;
+}
+
+/* Header */
+header {
+  box-shadow: 0 2px 8px rgba(var(--black), 5%);
+}
+
+nav a {
+  border-bottom: 4px solid transparent;
+  padding: 0.35em;
+  text-decoration: underline .1em transparent;
+  text-underline-offset: .25em;
+  transition: text-decoration-color 700ms;
+}
+
+nav a.active, nav a.active:hover {
+  text-decoration: underline .1em rgba(var(--gray-dark), 35%);
+}
+
+nav a:hover {
+  text-decoration: underline .1em rgba(var(--gray-dark), 25%);
+  text-underline-offset: .25em;
+  transition: text-decoration-color 700ms;
+}
+
+.cursor-cue:hover {
+  cursor: url("/misc/cue01_64x64.svg") 50 8, pointer;
+} 
+
+/* work detail */
+.back-work .arrow {
+  display: inline-block;
+  letter-spacing: -2px;
+  transform: scaleX(-1);
+}
+
+.back-work .arrow-label {
+  vertical-align: super;
+}
+
+/* eggs */
+.common-tertiary-bg::before,
+  .common-tertiary-bg::after {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: .35;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.capcom-icon01 {
+  background-image: url("../assets/eggs/capcom-logo.png");
+  top: -2%;
+}
+.capcom-primary-bg {
+  background-color: var(--color-capcom-blue);
+}
+.capcom-secondary-bg {
+  background-color: var(--color-capcom-yellow);
+}
+.capcom-tertiary-bg::after {
+  background-image: url("../assets/eggs/bg-sf2.png");
+  background-position: 0 10%;
+}
+
+.gyruss-icon01 {
+  background-image: url("../assets/eggs/gyruss.png");
+}
+.gyruss-primary-bg {
+  background-color: var(--color-gyruss-orange);
+}
+.gyruss-secondary-bg {
+  background: 
+    radial-gradient(
+      var(--gradient-gyruss-space)
+    );
+}
+.gyruss-tertiary-bg::after {
+  background-image: 
+    radial-gradient(
+      1px 1px at 21px 3px,
+      var(--color-white),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 32px 23px,
+      var(--color-yellow-spandex),
+      transparent
+    ),
+    radial-gradient(
+      1.2px 2px at 125px 120px,
+      var(--color-gray-blue),
+      transparent
+    ),
+    radial-gradient(
+      .7px .5px at 75px 48px,
+      var(--color-white),
+      transparent
+    ),
+
+    radial-gradient(
+      .4px .6px at 2px 43px,
+      var(--color-white),
+      transparent
+    ),
+    radial-gradient(
+      1.4px .5px at 169px 67.5px,
+      var(--color-yellow-spandex),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 65px 82px,
+      var(--color-white),
+      transparent
+    ),
+    radial-gradient(
+      .65px .4px at 41px 152px,
+      var(--color-light-steel-blue-faded),
+      transparent
+    );
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 1;
+}
+
+.gyruss-tertiary-bg::before {
+  background-image: 
+    /* cbeams at the tannhauser gates? */
+    radial-gradient(
+      5.7px 2.5px at 65px 82px,
+      var(--color-white),
+      transparent
+    ),
+    radial-gradient(
+      2.3px 7.5px at 65px 82px,
+      var(--color-white),
+      transparent
+    ),
+
+    radial-gradient(
+      5.7px 2.5px at 4.5% 10px,
+      var(--color-yellow-spandex),
+      transparent
+    ),
+    radial-gradient(
+      2.3px 7.5px at 4.5% 10px,
+      var(--color-yellow-spandex),
+      transparent
+    );
+  background-repeat: repeat;
+  background-size: 375px 330px;
+  opacity: .75;
+}
+
+.mario-icon01 {
+  background-image: url("../assets/eggs/mario64.png");
+}
+.mario-primary-bg {
+  background-color: var(--color-mario-red);
+}
+.mario-secondary-bg {
+  background-color: var(--color-mario-white);
+}
+.mario-tertiary-bg::after {
+  background-image: url("../assets/eggs/bg-mario-angst.png");
+  background-position: 0 100%;
+}
+
+.mgs-icon01 {
+  background-image: url("../assets/eggs/metal-gear-solid-box.png");
+  top: -4.5%;
+}
+.mgs-primary-bg {
+  background-color: var(--color-mgs-stone-blue);
+}
+.mgs-secondary-bg {
+  background-color: var(--color-mgs-gray);
+}
+.mgs-tertiary-bg::after {
+  background-image: url("../assets/eggs/bg-snake.png");
+  background-position: 100% 0;
+  background-size: contain;
+}
+
+.twinbee-icon01 {
+  background-image: url("../assets/eggs/twinbee.png");
+  top: -3.25%;
+}
+.twinbee-primary-bg {
+  background-color: var(--color-twinbee-blue);
+}
+.twinbee-secondary-bg {
+  background-color: var(--color-twinbee-pink);
+}
+.twinbee-tertiary-bg::after {
+  background-image: url("../assets/eggs/bg-twinbee.png");
+  background-position: 0 25%;
+  background-size: contain;
+}
+
+.zelda-icon01 {
+  background-image: url("../assets/eggs/zelda-shield.png");
+  top: -3%;
+}
+.zelda-primary-bg {
+  background-color: var(--color-zelda-green);
+}
+.zelda-secondary-bg {
+  background-color: var(--color-zelda-gold);
+}
+.zelda-tertiary-bg::after {
+  background-image: url("../assets/eggs/bg-link.png");
+  background-position: 0 0;
+}
+
+
+/* animated */
+@keyframes burns {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.burns-zoom {
+  animation: burns 14s ease-in-out infinite;
+}
+
+.zoom-detail {
+  cursor: zoom-in;
+  transition: transform 1.4s 300ms ease-in-out;
+}
+
+.zoom-detail:hover {
+  transform: scale(2.25);
+}
+
+.dropAway {
+  animation: dropAway forwards 1s ease-out 1;
+}
+
+.rollback {
+  animation: rollback forwards 1s ease-out 1;
+}
+
+@keyframes dropAway {
+  0% {
+    top: 5%;
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    opacity: 0;
+    top: 30%;
+    transform: rotateZ(-5deg);
+  }
+}
+
+@keyframes rollback {
+  0% {
+    opacity: 0;
+    top: 30%;
+    transform: rotateZ(-5deg);
+  }
+  25% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    top: 5%;
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes fadepulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: .50;
+    transform: scale(.875);
+  }
+  50% {
+    opacity: .35;
+    transform: scale(.75);
+  }
+  75% {
+    opacity: .50;
+    transform: scale(.875);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}

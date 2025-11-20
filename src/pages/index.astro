@@ -1,0 +1,27 @@
+---
+import CmsLayout from '../layouts/CmsLayout.astro';
+import { Image } from 'astro:assets';
+import logo1 from '../../public/favicon-288x288.png';
+---
+
+<CmsLayout>
+  <h1 class="!mb-8">
+    Hey Bub, 
+  </h1>
+  <p class="mb-4">
+    I'm Sina.
+  </p>
+  <p class="mb-4">
+    I like to code <span title="sometimes we overclock🔥, sometimes we undervolt🔌">💻</span>, tinker <span title="imagine it🧬, build it🔬, use it🚀">🥼</span>, and be on the ice during a penalty kill <span title="🤺two-way🛡️ hockey brotha🤝">🏒</span>.
+  </p>
+  <p class="mb-4">
+    I'm driven by a curiousity in various areas related to technology, music, 
+    and art.
+  </p>
+  <p class="mb-4">
+    I like making things that I enjoy using and 
+    love learning from creators/colleagues in the space.
+  </p>
+  <p class="mt-16 mb-4">thx, sina</p>
+  <Image width={48} height={48} src={logo1} alt="bub"/>
+</CmsLayout>

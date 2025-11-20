@@ -1,0 +1,6 @@
+# file patterns to ignore being transferred into docker image
+
+.devcontainer
+.git
+dist
+node_modules

@@ -1,0 +1,16 @@
+---
+import SampleBilliards from '../sample-billiards.astro';
+import { getAudioLabels } from '../../assets/audio/pool-audio';
+
+const post = Astro.props;
+
+export function getStaticPaths() {
+  return getAudioLabels('unlocks').map(
+    (label: String) => ({'params': {'scheme': label}}));
+}
+
+const {scheme} = Astro.params;
+
+---
+
+<SampleBilliards page_title={'Welcome \'Gunters'} scheme={scheme}/>

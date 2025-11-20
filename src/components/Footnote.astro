@@ -1,0 +1,10 @@
+---
+const { entry, index } = Astro.props;
+---
+
+<li class="my-2 !text-gray-blue" id=`footnote-${index}`>
+  { entry.type === 'link'
+    ? <a href={entry.content} target="_blank" rel="noopener noreferrer" class=" !text-gray-blue">{!!entry.label ? (`${entry.label} | `) : ''}<span class="underline">{entry.content}</span></a>
+    : <span class=" !text-gray-blue">{entry.content}</span>
+  }
+</li>

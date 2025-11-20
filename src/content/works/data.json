@@ -1,0 +1,366 @@
+[
+  {
+    "id": "work-ml-nlp",
+    "content": "",
+    "detailPage": "/work/work-ml-nlp",
+    "entryDate": "Nov 02 2025",
+    "iconEmoji": "⚜️",
+    "imageScreenshots": ["/favicon-288x288.png"],
+    "organization": "ModoLead",
+    "organizationLogo": "",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Python"},
+      {"label": "spaCy"},
+      {"label": "Qdrant"},
+      {"label": "NLP"}
+    ],
+    "summary": "",
+    "title": "Natural language document classifier and affinity scoring service"
+  },
+  {
+    "id": "work-ml-editor",
+    "content": "",
+    "detailPage": "/work/work-ml-editor",
+    "entryDate": "Nov 01 2025",
+    "iconEmoji": "⚜️",
+    "imageScreenshots": ["/favicon-288x288.png"],
+    "organization": "ModoLead",
+    "organizationLogo": "",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "NextJS"},
+      {"label": "Typescript"},
+      {"label": "Tailwind CSS"}
+    ],
+    "summary": "",
+    "title": "Document Editor/Viewer web application"
+  },
+  {
+    "id": "work-ml-nft",
+    "content": "",
+    "detailPage": "/work/work-ml-nft",
+    "entryDate": "Oct 02 2025",
+    "iconEmoji": "⚜️",
+    "imageScreenshots": ["/favicon-288x288.png"],
+    "organization": "ModoLead",
+    "organizationLogo": "",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "React"},
+      {"label": "Python"},
+      {"label": "Beautiful Soup"}
+    ],
+    "summary": "",
+    "title": "NFT value tracking web application."
+  },
+  {
+    "id": "work-ml-cryx",
+    "content": "",
+    "detailPage": "/work/work-ml-cryx",
+    "entryDate": "Oct 01 2025",
+    "iconEmoji": "⚜️",
+    "imageScreenshots": ["/favicon-288x288.png"],
+    "organization": "ModoLead",
+    "organizationLogo": "",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "React Native"},
+      {"label": "Expo"},
+      {"label": "MMKV"}
+    ],
+    "summary": "",
+    "title": "Blockchain wallet transaction tracking app"
+  },
+  {
+    "id": "work-st-nlp",
+    "content": "",
+    "detailPage": "/work/work-st-nlp",
+    "entryDate": "Sep 01 2019",
+    "iconEmoji": "",
+    "imageScreenshots": [
+      "/shot/shot-stk-nlp-01-thumb.jpg",
+      "/shot/shot-stk-nlp-02-thumb.jpg"
+    ],
+    "organization": "Stick.ai (acquired by Google)",
+    "organizationLogo": "/logo/logo-stick-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "React"},
+      {"label": "Spring Boot"},
+      {"label": "Node"},
+      {"label": "MongoDB"}
+    ],
+    "summary": "",
+    "title": "Text-to-visual NLP presentation generation webapp"
+  },
+  {
+    "id": "work-st-dock",
+    "content": "",
+    "detailPage": "/work/work-st-dock",
+    "entryDate": "Dec 15 2018",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-stk-dev-thumb.jpg"],
+    "organization": "Stick.ai (acquired by Google)",
+    "organizationLogo": "/logo/logo-stick-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Docker"},
+      {"label": "Dev Containers"}
+    ],
+    "summary": "",
+    "title": "Container first ethos for rapid onboarding and shipping code week 1"
+  },
+  {
+    "id": "work-st-mgm",
+    "content": "",
+    "detailPage": "/work/work-st-mgm",
+    "entryDate": "Oct 15 2018",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-stk-mgm-thumb.jpg"],
+    "organization": "Stick.ai (acquired by Google)",
+    "organizationLogo": "/logo/logo-stick-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "1:1s"},
+      {"label": "Mentorship"},
+      {"label": "Career Development"}
+    ],
+    "summary": "",
+    "title": "Interviewed, mentored and aided career development paths for 5 reports"
+  },
+  {
+    "id": "work-st-des",
+    "content": "",
+    "detailPage": "/work/work-st-des",
+    "entryDate": "Sep 01 2018",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-stk-collab-thumb.jpg"],
+    "organization": "Stick.ai (acquired by Google)",
+    "organizationLogo": "/logo/logo-stick-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Trello"},
+      {"label": "AWS"},
+      {"label": "AirTable"},
+      {"label": "Figma"}
+    ],
+    "summary": "",
+    "title": "Collaboration with PMs/designers from ideation to launch in a fast-paced startup"
+  },
+  {
+    "id": "work-cs-ko",
+    "content": "",
+    "detailPage": "/work/work-cs-ko",
+    "entryDate": "Aug 15 2018",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-cs-mob-thumb.jpg"],
+    "organization": "CoStar",
+    "organizationLogo": "/logo/logo-costar-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "KnockoutJS"},
+      {"label": "C#"},
+      {"label": "SPA"},
+      {"label": "REST"}
+    ],
+    "summary": "",
+    "title": "Mobile-first redesign of real estate web properties"
+  },
+  {
+    "id": "work-cs-fig",
+    "content": "",
+    "detailPage": "/work/work-cs-fig",
+    "entryDate": "Sep 01 2017",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-cs-fig-thumb.jpg"],
+    "organization": "CoStar",
+    "organizationLogo": "/logo/logo-costar-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Sketch"},
+      {"label": "Figma"},
+      {"label": "CSS"}
+    ],
+    "summary": "",
+    "title": "Responsive webapps from product/design team mocks"
+  },
+  {
+    "id": "work-cs-gtm",
+    "content": "",
+    "detailPage": "/work/work-cs-gtm",
+    "entryDate": "Sep 01 2016",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-cs-gtm-thumb.jpg"],
+    "organization": "CoStar",
+    "organizationLogo": "/logo/logo-costar-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Vanilla js"},
+      {"label": "Google Tag Manager"},
+      {"label": "C#"}
+    ],
+    "summary": "",
+    "title": "Engagement/conversion testing/leadgen and maintenance"
+  },
+  {
+    "id": "work-con-ad",
+    "content": "",
+    "detailPage": "/work/work-con-ad",
+    "entryDate": "Aug 01 2016",
+    "iconEmoji": "📶",
+    "imageScreenshots": ["/shot/shot-con-anfe-thumb.jpg"],
+    "organization": "Consultant",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "React"},
+      {"label": "D3.js"},
+      {"label": "Pandas"},
+      {"label": "NodeJS"}
+    ],
+    "summary": "",
+    "title": "Real-time analytics front-end for large scale ad serving stealth startup"
+  },
+  {
+    "id": "work-con-nepal",
+    "content": "",
+    "detailPage": "/work/work-con-nepal",
+    "entryDate": "Sep 06 2013",
+    "iconEmoji": "⛑️",
+    "imageScreenshots": ["/shot/shot-hhp-thumb.jpg"],
+    "organization": "Consultant",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Wordpress"},
+      {"label": "Instagram"},
+      {"label": "Volunteering"},
+      {"label": "Bootstrap"}
+    ],
+    "summary": "",
+    "title": "Disaster relief site for Nepalese nonprofit"
+  },
+  {
+    "id": "work-con-tour",
+    "content": "",
+    "detailPage": "/work/work-con-tour",
+    "entryDate": "Sep 05 2013",
+    "iconEmoji": "🎓",
+    "imageScreenshots": ["/shot/shot-lg-thumb.jpg"],
+    "organization": "Consultant",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Grails"},
+      {"label": "Java"},
+      {"label": "UCLA"},
+      {"label": "Zoom"},
+      {"label": "AWS"}
+    ],
+    "summary": "",
+    "title": "Online University Live Video Tour/QA"
+  },
+  {
+    "id": "work-con-tele",
+    "content": "",
+    "detailPage": "/work/work-con-tele",
+    "entryDate": "Sep 02 2013",
+    "iconEmoji": "💼",
+    "imageScreenshots": ["/shot/shot-con-tele-thumb.jpg"],
+    "organization": "Consultant",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Asterisk"},
+      {"label": "Spring MVC"},
+      {"label": "Java"}
+    ],
+    "summary": "",
+    "title": "Telephony job candidate questionnaire/screening"
+  },
+  {
+    "id": "work-ng-hybris",
+    "content": "",
+    "detailPage": "/work/work-ng-hybris",
+    "entryDate": "Sep 01 2013",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-ng-hybris-thumb.jpg"],
+    "organization": "NastyGal",
+    "organizationLogo": "/logo/logo-ng-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Ruby"},
+      {"label": "Java"},
+      {"label": "Hybris"}
+    ],
+    "summary": "",
+    "title": "Ecommerce migration from ColdFusion"
+  },
+  {
+    "id": "work-ng-ups",
+    "content": "",
+    "detailPage": "/work/work-ng-ups",
+    "entryDate": "Aug 22 2013",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-ng-rtn-thumb.jpg"],
+    "organization": "NastyGal",
+    "organizationLogo": "/logo/logo-ng-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "NodeJS"},
+      {"label": "ExpressJS"},
+      {"label": "Riak"}
+    ],
+    "summary": "",
+    "title": "UPS® shipping label generator"
+  },
+  {
+    "id": "work-ng-ab",
+    "content": "",
+    "detailPage": "/work/work-ng-ab",
+    "entryDate": "Aug 21 2013",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-ng-opt-thumb.jpg"],
+    "organization": "NastyGal",
+    "organizationLogo": "/logo/logo-ng-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Vanilla js"},
+      {"label": "Optimizely"},
+      {"label": "A/B Test"}
+    ],
+    "summary": "",
+    "title": "Optimizely landing pages"
+  },
+  {
+    "id": "work-eh-features",
+    "content": "",
+    "detailPage": "/work/work-eh-features",
+    "entryDate": "Sep 01 2012",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-eh-thumb.jpg"],
+    "organization": "eHarmony: Singles",
+    "organizationLogo": "/logo/logo-eh-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Vanilla js"},
+      {"label": "IIFE"}
+    ],
+    "summary": "",
+    "title": "Modular js feature development"
+  },
+  {
+    "id": "work-eh-jazzed",
+    "content": "",
+    "detailPage": "/work/work-eh-jazzed",
+    "entryDate": "May 01 2011",
+    "iconEmoji": "",
+    "imageScreenshots": ["/shot/shot-jz-thumb.jpg"],
+    "organization": "eHarmony: Jazzed",
+    "organizationLogo": "/logo/logo-eh-66x66.png",
+    "orginizationUrl": "",
+    "stackHighlights": [
+      {"label": "Vanilla js"},
+      {"label": "IIFE"}
+    ],
+    "summary": "",
+    "title": "Modular js feature development"
+  }
+]

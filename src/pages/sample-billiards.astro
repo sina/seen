@@ -1,0 +1,49 @@
+---
+import CmsLayout from '../layouts/CmsLayout.astro';
+import { Billiard, Racked } from '../components/billiard/Billiard';
+
+const { scheme } = Astro.props;
+const billiardWidth8Ball = '4rem';
+const billiardWidth9Ball = '4rem';
+---
+
+<CmsLayout
+	page_title={'Welcome 😎'}
+  classNames=`border-solid border-gray-brown-light border-1 rounded-2xl ${scheme}-primary-bg`
+>
+  <div class=`border-solid border-black border-4 rounded-2xl p-4 relative ${scheme}-secondary-bg`>
+    <div class=`common-icon absolute top-[-5%] right-[5%] bg-no-repeat bg-contain w-20 h-20 ${scheme}-icon01` />
+    <div class=`mb-32 common-tertiary-bg ${scheme}-tertiary-bg`>
+      <code>Billiards</code>
+      <div class="mb-24">
+        <Billiard count={1} className={'float-left m-1'} showcase={true} />
+      </div>
+      <div class="mt-12 mb-24 clear-left">
+        <Billiard count={1} className={'float-left m-1'} design="ares" showcase={true} />
+      </div>
+      <div class="mt-12 mb-28 clear-left">
+        <Billiard count={1} className={'float-left m-1'} design="zeus" showcase={true} />
+      </div>
+      <div class="mt-12 mb-28 clear-left">
+        <Billiard count={1} className={'float-left m-1'} design="arcos" showcase={true} />
+      </div>
+      <div class="mt-12 mb-28 clear-left">
+        <Billiard count={1} className={'float-left m-1'} design="tournament" showcase={true} />
+      </div>
+      <div class="mt-12 mb-28 clear-left w-">
+        <Billiard count={1} className={'float-left m-1'} design="tournament-black" showcase={true} />
+      </div>
+    </div>
+    <div class="mb-56 min-h-80 clear-both">
+      <hr />
+      <code>Billiards: Racked</code>
+      <div class="my-16">
+        <div class="float-left mx-8 w-4 h-4" />
+        <Racked className='float-left mb-16 eight-ball grain' style="8ball" billiardWidth={billiardWidth8Ball} design="tournament-black"/>
+        <div class="float-left mx-8 w-4 h-4" />
+        <Racked className='float-left nine-ball grain' style="9ball" billiardWidth={billiardWidth9Ball}/>
+      </div>
+    </div>
+    <div class="clear-both"></div>
+  </div>
+</CmsLayout>

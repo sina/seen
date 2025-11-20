@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import SimpleLayout from '../layouts/SimpleLayout.astro';
+import ErrorImage1 from '../assets/error-121-gw.png';
+import ErrorImage2 from '../assets/error-doc-shriek.png';
+import { randomListItem } from '../consts';
+---
+
+<SimpleLayout page_title="Page not found">
+  <span class="absolute top-1/4 left-0 right-0 mx-auto text-6xl text-gray-blue text-center">
+    <span class="">
+      404
+      <span class="text-sm w-[100%] inline-block">not found</span>
+    </span>
+  </span>
+  <a href="/">
+    <Image width={1020} height={510} src={randomListItem([ErrorImage1, ErrorImage2])} alt="404" class="opacity-10 burns-zoom"/>
+  </a>
+</SimpleLayout>

@@ -1,0 +1,63 @@
+---
+import CmsLayout from './CmsLayout.astro';
+import Grouplet from '../components/grouplet/Grouplet';
+import { getCollection } from 'astro:content';
+
+enum Operation {
+  GreaterThanEqual = 1,
+  LessThanEqual = 2
+}
+
+interface Settings {
+  columns: number,
+  breakpoint: {
+    threshold: number,
+    operation: Operation
+  }
+}
+
+const works  = await getCollection('works');
+const columnSettings: Settings[] = [
+  {
+    columns: 6,
+    breakpoint: {
+      //threshold is width in px
+      threshold: 2566,
+      operation: Operation.GreaterThanEqual
+    }
+  },
+  {
+    columns: 5,
+    breakpoint: {
+      //threshold is width in px
+      threshold: 1996,
+      operation: Operation.GreaterThanEqual
+    }
+  },
+  {
+    columns: 4,
+    breakpoint: {
+      threshold: 1371,
+      operation: Operation.GreaterThanEqual
+    }
+  },
+  {
+    columns: 3,
+    breakpoint: {
+      threshold: 575,
+      operation: Operation.GreaterThanEqual
+    }
+  },
+  {
+    columns: 2,
+    breakpoint: {
+      threshold: 574,
+      operation: Operation.LessThanEqual
+    }
+  }
+];
+---
+
+<CmsLayout page_title="Works" classNames="text-center">
+  <Grouplet list={works} columnSettings={columnSettings} client:only="react" />
+</CmsLayout>

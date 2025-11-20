@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        GROUP_NAME: ${GROUP_NAME}
+        PROJECT_NAME: ${PROJECT_NAME}
+        USER_NAME: ${USER_NAME}
+        USER_ID: ${USER_ID}
+        GROUP_ID: ${GROUP_ID}
+      dockerfile: Dockerfile
+
+    volumes:
+      - ..:/home/${USER_NAME}/${PROJECT_NAME}:cached
+    
+    command: sleep infinity

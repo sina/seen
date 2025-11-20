@@ -1,0 +1,17 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/global.css'
+
+const { title = SITE_TITLE, description= SITE_DESCRIPTION, page_title, image } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} page_title={page_title} image={image}/>
+	</head>
+  <body class="m-0 p-0 text-left font text-[20px]">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,41 @@
+
+:root {
+  --color-code: rgba(255, 255, 255, .75);
+  --color-line-numbers: rgb(250, 242, 144, .75);
+  --color-primary: rgba(57, 58, 61, 1);
+  --color-secondary: rgba(46, 61, 90, 1);
+  --color-text: rgba(199, 199, 239, .75);
+}
+
+.code-block-container {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.code-block-thumb-container {
+  color: var(--color-text);
+}
+
+.code-title {
+  background-color: var(--color-secondary);
+}
+
+.code-container {
+  display: table;
+}
+
+.code-row {
+  display: table-row;
+}
+
+.code-row > div {
+  display: table-cell;
+}
+
+.line-numbers {
+  color: var(--color-line-numbers);
+}
+
+.code {
+  color: var(--color-code);
+}

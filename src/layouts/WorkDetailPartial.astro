@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import TagList from '../components/util/TagList.astro';
+import { closeTab } from '../consts';
+
+const { relatedData } = Astro.props;
+const {imageScreenshots: detailImages, organization, stackHighlights, title: page_title } = relatedData;
+---
+<article>
+  <div>
+    <a id="back-button" class="back-work" href="#"><span class="arrow">╰┈➤</span> <span class="arrow-label">back</span></a>
+  </div>
+  <div class="text-left">
+    <h4>{organization}</h4>
+    { stackHighlights &&
+      <TagList items={stackHighlights} />
+    }
+  </div>
+  </div>
+  <div class="text-center m-8">
+    {detailImages && detailImages.map((entry: string, index: number) => (
+      <Image width={400} height={200} src={entry} alt="" class="mx-auto zoom-detail border-steel-blue-faded border-2 mb-4"/>
+    ))}
+
+  </div>
+  <div class="prose">
+    <div class="title text-center">
+      <h5>{page_title}</h5>
+      <hr class="border-solid border-t border-t-gray-light" />
+    </div>
+  </div>
+</article>
+
+<!-- writing the script server-side to access helper in frontmatter -->
+<script is:inline set:html={`
+  const handler = ${closeTab};
+  document.getElementById('back-button')?.addEventListener('click', () => {
+    handler(window);
+  });
+`}/>

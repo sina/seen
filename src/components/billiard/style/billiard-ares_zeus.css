@@ -1,0 +1,98 @@
+:root {
+  --color-blue-zeus: rgb(0, 108, 183);
+  --color-blue-zeus-alt: rgb(115, 209, 221);
+  --color-green-zeus: rgb(191, 193, 10);
+  --color-purple-zeus: rgb(134, 59, 146);
+}
+
+.billiard.ares[data-count]::after,
+  .billiard.zeus[data-count]::after {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 22cqi;
+  font-weight: 800;
+  margin-top: 3%;
+}
+
+.billiard.zeus[data-count="2"] {
+  --color: var(--color-blue-zeus);
+}
+
+.billiard.zeus[data-count="4"] {
+  --color: var(--color-purple-zeus);
+}
+
+.billiard.zeus[data-count="6"] {
+  --color: var(--color-green-zeus);
+}
+
+.billiard.zeus[data-count="7"] {
+  --color: var(--color-blue-zeus-alt);
+}
+
+.billiard.zeus[data-count="10"] {
+  --color: var(--color-blue-zeus);
+}
+
+.billiard.zeus[data-count="12"] {
+  --color: var(--color-purple-zeus);
+}
+
+.billiard.zeus[data-count="14"] {
+  --color: var(--color-green-zeus);
+}
+
+.billiard.zeus[data-count="15"] {
+  --color: var(--color-blue-zeus-alt);
+}
+
+.billiard.ares[data-count="0"],
+  .billiard.zeus[data-count="0"] {
+  background-image: 
+    var(--grad-light),
+    var(--grad-circle-target-red), 
+    var(--grad-stripe);
+}
+
+ .billiard.ares[data-count]::after,
+  .billiard.zeus[data-count]::after {
+  margin-left: -.5%;
+}
+
+.billiard.ares[data-count="1"]::after,
+  .billiard.zeus[data-count="1"]::after,
+  .billiard.ares[data-count="8"]::after,
+  .billiard.zeus[data-count="8"]::after {
+  margin-left: 1%;
+}
+
+.billiard.ares[data-count="9"]::after,
+  .billiard.zeus[data-count="9"]::after,
+  .billiard.ares[data-count="13"]::after,
+  .billiard.zeus[data-count="13"]::after {
+  margin-left: 0;
+}
+
+.billiard.ares[data-count="2"]::after,
+  .billiard.zeus[data-count="2"]::after,
+  .billiard.ares[data-count="3"]::after,
+  .billiard.zeus[data-count="3"]::after,
+  .billiard.ares[data-count="4"]::after,
+  .billiard.zeus[data-count="4"]::after,
+  .billiard.ares[data-count="5"]::after,
+  .billiard.zeus[data-count="5"]::after {
+  margin-left: .5%;
+}
+
+/* dot underline substitution */
+.billiard.ares[data-count="6"]:before,
+  .billiard.zeus[data-count="6"]:before,
+  .billiard.ares[data-count="9"]:before,
+  .billiard.zeus[data-count="9"]:before {
+    background-image: var(--grad-circle-target-black);
+    border: none;
+    bottom: 27cqh;
+    height: 25%;
+    left: 49.75%;
+    width: 25%;
+  }

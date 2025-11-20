@@ -1,0 +1,53 @@
+---
+import CmsLayout from './CmsLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+import Footnote from '../components/Footnote.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { Image } from 'astro:assets';
+import { randomFilterClass } from '../consts';
+
+type Props = CollectionEntry<'thoughts'>['data'];
+
+const { page_description, pubDate, updatedDate, heroImage, iconEmoji, page_title, footnotes } = Astro.props;
+---
+
+<CmsLayout description={page_description} page_title={page_title}>
+  <article>
+    <div class="hero-image text-center">
+      {heroImage && <Image src={heroImage} alt="" class="w-1/2 mx-auto"/>}
+      {iconEmoji && (
+        <span class={`text-[12em] ${randomFilterClass()} filter-shadow`}>{iconEmoji}</span>
+      )}
+    </div>
+    <div class="prose">
+      <div class="title text-center">
+        <h1>{page_title}</h1>
+        <hr class="border-solid border-t border-t-gray-light" />
+      </div>
+      <div class="date text-right text-sm text-gray-300">
+        <FormattedDate date={pubDate} />
+        {
+          updatedDate && (
+            <div class="last-updated-on italic">
+              updated <FormattedDate date={updatedDate} />
+            </div>
+          )
+        }
+      </div>
+      <slot />
+    </div>
+    {
+      !!footnotes && 
+        <section class="footnotes">
+            <hr class="border-solid border-t border-t-gray-light my-8" />
+            <ol class="list-decimal text-xs">
+              {
+                footnotes.map((entry, index) => (
+                  <Footnote entry={entry} index={index + 1} />
+                ))
+              }
+            </ol>
+        </section>
+    }
+  </article>
+</CmsLayout>

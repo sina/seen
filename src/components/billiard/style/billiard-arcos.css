@@ -1,0 +1,165 @@
+:root {
+  --grad-circle-outline-black:
+    /* top sight */
+    radial-gradient(
+      2.3% 2.3% at 50% 34.3%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.8% 1.8% at 50% 35%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.5% 1.5% at 50% 35.5%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.15% 1.1% at 50% 36.1%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+
+    /* bottom left sight */
+    radial-gradient(
+      2.3% 2.3% at 38.65% 61.5%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.8% 1.8% at 39.18% 61%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.25% 1.25% at 39.705% 60.50%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      .75% .75% at 40.1% 60.1%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+
+    /* bottom right sight */
+    radial-gradient(
+      2.2% 2.2% at 61.45% 61.45%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.84% 1.84% at 61.06% 61%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.3% 1.3% at 60.6% 60.45%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      .9% .9% at 60.25% 60.05%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+
+    /* number ring */
+    radial-gradient(
+      100% 100%,
+      var(--color-white) 15.5%,
+      var(--color-black) 16%,
+      var(--color-black) 17%,
+      var(--color-black) 18%,
+      var(--color-transparent) 18.1%
+    );
+  --grad-circle-tri-black:
+    linear-gradient(
+      60deg,
+      var(--color-transparent) 52%, 
+      var(--color-white) 46%
+    ),
+    linear-gradient(
+      300deg,
+      var(--color-transparent) 52%, 
+      var(--color-white) 46%
+    ),
+    linear-gradient(
+      0deg, 
+      var(--color-white) 43%, 
+      var(--color-black) 38%, 
+      var(--color-black) 39%
+  );
+  --marks_0_135_225-debug: conic-gradient(
+      rgba(255, 0, 0, .5) 0deg .1%,
+      transparent .25% 135deg,
+      rgba(255, 255, 0, .25) 135deg .1%,
+      transparent 136deg 225deg,
+      rgba(0, 0, 255, .25) 225deg .1%,
+      transparent 226deg
+    );
+}
+
+.billiard.arcos[data-count] {
+  background-image: 
+    /* var(--marks_0_135_225-debug), */
+    var(--grad-light),
+    var(--grad-circle-outline-black), 
+    var(--grad-stripe);
+}
+
+.billiard.arcos[data-count="9"],
+  .billiard.arcos[data-count="10"],
+  .billiard.arcos[data-count="11"],
+  .billiard.arcos[data-count="12"],
+  .billiard.arcos[data-count="13"],
+  .billiard.arcos[data-count="14"],
+  .billiard.arcos[data-count="15"] {
+  --grad-stripe: radial-gradient(
+    circle at center,
+    var(--color-white) 64%,
+    var(--color) 1%
+  );
+}
+
+.billiard.arcos[data-count]::after {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 22cqi;
+  font-weight: 400;
+  letter-spacing: -1cqi;
+  margin-top: 0%;
+  margin-left: -1%;
+}
+
+.billiard.arcos[data-count="4"] {
+  --color: var(--color-purple-alt);
+}
+
+.billiard.arcos[data-count="7"] {
+  --color: var(--color-brown);
+}
+
+.billiard.arcos[data-count="12"] {
+  --color: var(--color-purple-alt);
+}
+
+.billiard.arcos[data-count="15"] {
+  --color: var(--color-brown);
+}
+
+.billiard.arcos[data-count="0"] {
+  background-image: 
+    var(--grad-light),
+    var(--grad-circle-tri-black), 
+    var(--grad-stripe);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.billiard.arcos[data-count="14"]::after {
+  margin-left: -1.5%;
+}

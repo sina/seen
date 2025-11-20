@@ -1,0 +1,150 @@
+:root {
+  --color-green-alt: rgb(102, 187, 157);
+  --color-pink: rgb(221, 109, 127);
+  --grad-circle-outline-black-broken:
+    radial-gradient(
+      1.25% 1.35% at 33.7% 48.8%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.25% 1.35% at 33.7% 51.75%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.25% 1.35% at 66.3% 48.8%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      1.25% 1.35% at 66.3% 51.75%,
+      var(--color-black) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      2.5% 2.5% at 33.7% 50%,
+      var(--color-white) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+      2.5% 2.5% at 66.4% 50%,
+      var(--color-white) 60%,
+      var(--color-transparent) 60%
+    ),
+    radial-gradient(
+    100% 100%,
+    var(--color-white) 15.5%,
+    var(--color-black) 16%,
+    var(--color-black) 17%,
+    var(--color-white) 17.1%,
+    var(--color-white) 18%,
+    var(--color-transparent) 19%
+  );
+  --grad-circle-target-black: radial-gradient(
+    100% 100%,
+    var(--color-black) 8%,
+    var(--color-transparent) 1px
+  );
+}
+
+.billiard.tournament-black[data-count] {
+  background-color: var(--color-black);
+}
+
+.billiard.tournament[data-count],
+  .billiard.tournament-black[data-count] {
+  --mask-bottom: calc(100% - var(--stripe, 0) * 18.5%);
+  --mask-top: calc(var(--stripe, 0) * 18.5%);
+  background-image: 
+    var(--grad-light),
+    var(--grad-circle-outline-black-broken), 
+    var(--grad-stripe);
+}
+
+.billiard.tournament[data-count]::after,
+  .billiard.tournament-black[data-count]::after {
+  font-family: "Sarabun", sans-serif;
+  font-size: 25cqi;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -3cqi;
+  margin-left: -3.5%;
+  margin-top: -4%;
+}
+
+.billiard.tournament[data-count="4"],
+  .billiard.tournament-black[data-count="4"] {
+  --color: var(--color-pink);
+}
+
+.billiard.tournament-black[data-count="5"] {
+  --color: var(--color-purple-alt);
+}
+
+.billiard.tournament-black[data-count="6"] {
+  --color: var(--color-green-alt);
+}
+
+.billiard.tournament[data-count="7"],
+  .billiard.tournament-black[data-count="7"] {
+  --color: var(--color-brown);
+}
+
+.billiard.tournament[data-count="12"],
+  .billiard.tournament-black[data-count="12"] {
+  --color: var(--color-pink);
+}
+
+.billiard.tournament-black[data-count="13"] {
+  --color: var(--color-purple-alt);
+}
+
+.billiard.tournament-black[data-count="14"] {
+  --color: var(--color-green-alt);
+}
+
+.billiard.tournament[data-count="15"],
+  .billiard.tournament-black[data-count="15"] {
+  --color: var(--color-brown);
+}
+
+.billiard.tournament[data-count="0"] {
+  background-image: 
+    var(--grad-light),
+    var(--grad-circle-target-red), 
+    var(--grad-stripe);
+}
+
+.billiard.tournament-black[data-count="0"] {
+  background-image: 
+    var(--grad-light),
+    var(--grad-circle-target-black), 
+    var(--grad-stripe);
+}
+
+.billiard.tournament[data-count="4"]::after,
+  .billiard.tournament-black[data-count="4"]::after,
+  .billiard.tournament[data-count="5"]::after,
+  .billiard.tournament-black[data-count="5"]::after,
+  .billiard.tournament[data-count="6"]::after,
+  .billiard.tournament-black[data-count="6"]::after,
+  .billiard.tournament[data-count="8"]::after,
+  .billiard.tournament-black[data-count="8"]::after,
+  .billiard.tournament[data-count="9"]::after,
+  .billiard.tournament-black[data-count="9"]::after {
+    margin-left: -3%;
+}
+
+.billiard.tournament[data-count="10"]::after,
+  .billiard.tournament-black[data-count="10"]::after,
+  .billiard.tournament[data-count="12"]::after,
+  .billiard.tournament-black[data-count="12"]::after,
+  .billiard.tournament[data-count="13"]::after,
+  .billiard.tournament-black[data-count="13"]::after,
+  .billiard.tournament[data-count="14"]::after,
+  .billiard.tournament-black[data-count="14"]::after,
+  .billiard.tournament[data-count="15"]::after,
+  .billiard.tournament-black[data-count="15"]::after {
+    margin-left: -4%;
+}

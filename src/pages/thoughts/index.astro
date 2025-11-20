@@ -1,0 +1,22 @@
+---
+import CmsLayout from '../../layouts/CmsLayout.astro';
+import { getCollection } from 'astro:content';
+import ThoughtPost from '../../components/ThoughtPost.astro';
+import { randomFilterClass } from '../../consts';
+
+const posts = (await getCollection('thoughts')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<CmsLayout page_title="Thoughts">
+  <section>
+    <ul class="flex flex-wrap gap-4 list-none m-0 p-0">
+      {
+        posts.map((post, index) => (
+          <ThoughtPost id={post.id} data={post.data} classNames="w-[100%]" emojiFilterClass={`${randomFilterClass()} filter-shadow`}/>
+        ))
+      }
+    </ul>
+  </section>
+</CmsLayout>

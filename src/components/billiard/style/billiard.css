@@ -1,0 +1,259 @@
+/*
+  Based on Mark Boots CSS Billiard Ball Demo
+  https://github.com/mark-boots
+*/
+
+:root {
+  --color-black: rgb(0, 0, 0);
+  --color-blue: rgb(0, 75, 170);
+  --color-brown: rgb(145, 75, 29);
+  --color-green: rgb(0, 67, 66);
+  --color-maroon: rgb(173, 14, 24);
+  --color-orange: rgb(255, 106, 0);
+  --color-purple: rgb(53, 31, 95);
+  --color-purple-alt: rgb(120, 97, 214);
+  --color-red: rgb(253, 52, 36);
+  --color-transparent: rgb(242, 242, 242, 0%);
+  --color-white: rgb(242, 242, 242);
+  --color-yellow: rgb(253, 200, 75);
+  --grad-circle: radial-gradient(
+    100% 100%,
+    var(--color-white) 15%,
+    var(--color-transparent) calc(20% + 1px)
+  );
+  --grad-circle-target-red: radial-gradient(
+    100% 100%,
+    var(--color-red) 8%,
+    var(--color-transparent) 1px
+  );
+  --grad-light: radial-gradient(
+    100% 100% at 70% 15%,
+    rgba(255, 255, 255, 50%),
+    rgba(255, 255, 255, 20%) 10%,
+    rgba(0, 0, 0, 60%) 80%,
+    rgba(0, 0, 0, 80%)
+  );
+}
+
+.billiard {
+  aspect-ratio: 1/1;
+  background-color: var(--color-white);
+  background-image: var(--grad-light);
+  border-radius: 50%;
+  box-shadow: -.5rem .5rem 1rem rgba(0, 0, 0, 35%);
+  min-width: 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.billiard[data-count] {
+  --mask-bottom: calc(100% - var(--stripe, 0) * 24.5%);
+  --mask-top: calc(var(--stripe, 0) * 24.5%);
+  --grad-stripe: linear-gradient(
+    180deg, 
+    var(--color-transparent) calc(var(--mask-top) - 1px), 
+    var(--color, var(--color-transparent)) var(--mask-top) var(--mask-bottom),
+    var(--color-transparent) calc(var(--mask-bottom) + 1px)
+  );
+  
+  background-color: var(--color-white);
+  background-image: 
+    var(--grad-light),
+    var(--grad-circle), 
+    var(--grad-stripe);
+  container-type: inline-size;
+  display: grid;
+  place-items: center;
+}
+
+.billiard[data-count]::after {
+  color: var(--color-black);
+  content: var(--label, "");
+  filter: blur(.5px);
+  font-family: "engplot", sans-serif;
+  font-size: 18cqi;
+  font-style: normal;
+  margin-left: -1.5%;
+  text-decoration: var(--line, none);
+}
+
+.billiard[data-count="1"] {
+  --color: var(--color-yellow);
+  --label: "1";
+}
+
+.billiard[data-count="2"] {
+  --color: var(--color-blue);
+  --label: "2";
+}
+
+.billiard[data-count="3"] {
+  --color: var(--color-red);
+  --label: "3";
+}
+
+.billiard[data-count="4"] {
+  --color: var(--color-purple);
+  --label: "4";
+}
+
+.billiard[data-count="5"] {
+  --color: var(--color-orange);
+  --label: "5";
+}
+
+.billiard[data-count="6"] {
+  --color: var(--color-green);
+  --label: "6";
+  --line: underline;
+}
+
+.billiard[data-count="7"] {
+  --color: var(--color-maroon);
+  --label: "7";
+}
+
+.billiard[data-count="8"] {
+  --color: var(--color-black);
+  --label: "8";
+}
+
+.billiard[data-count="9"] {
+  --color: var(--color-yellow);
+  --label: "9";
+  --line: underline;
+  --stripe: 1;
+}
+
+.billiard[data-count="10"] {
+  --color: var(--color-blue);
+  --label: "10";
+  --stripe: 1;
+}
+
+.billiard[data-count="11"] {
+  --color: var(--color-red);
+  --label: "11";
+  --stripe: 1;
+}
+
+.billiard[data-count="12"] {
+  --color: var(--color-purple);
+  --label: "12";
+  --stripe: 1;
+}
+
+.billiard[data-count="13"] {
+  --color: var(--color-orange);
+  --label: "13";
+  --stripe: 1;
+}
+
+.billiard[data-count="14"] {
+  --color: var(--color-green);
+  --label: "14";
+  --stripe: 1;
+}
+
+.billiard[data-count="15"] {
+  --color: var(--color-maroon);
+  --label: "15";
+  --stripe: 1;
+}
+
+.billiard[data-count="0"] {
+  --color: var(--color-white);
+  --label: "";
+}
+
+.billiard[data-count="4"]::after {
+  margin-left: -3%;
+}
+
+.billiard[data-count="5"]::after,
+  .billiard[data-count="10"]::after,
+  .billiard[data-count="11"]::after,
+  .billiard[data-count="12"]::after {
+  margin-left: .5%;
+}
+
+.billiard[data-count="1"]::after,
+  .billiard[data-count="8"]::after {
+  margin-left: 0;
+}
+
+.billiard[data-count="9"]::after {
+  margin-left: 1%;
+}
+
+.billiard[data-count="2"]::after,
+  .billiard[data-count="3"]::after,
+  .billiard[data-count="15"]::after {
+  margin-left: .25%;
+}
+
+/* curved underline */
+.billiard[data-count="6"],
+  .billiard[data-count="9"] {
+  --line: none;
+  container-type: size;
+  position: relative;
+}
+
+.billiard[data-count="6"]:before,
+  .billiard[data-count="9"]:before {
+  --line: none;
+  border-bottom-width: 1.15cqw;
+  border-color: var(--color-black);
+  border-radius: 50%;
+  bottom: 38.5cqh;
+  content: "";
+  height: 5%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 15%;
+  z-index: 1;
+}
+
+.rack-box {
+  position: relative;
+}
+
+.rack {
+  mask-image: url("../asset/8Ball-mask.png");
+  mask-repeat: no-repeat;
+  mask-position: 0;
+  mask-size: contain;
+  position: absolute;
+  z-index: 4;
+}
+
+.rack.eight-ball {
+  mask-size: 75%;
+}
+
+.rack.nine-ball {
+  mask-image: url("../asset/9Ball-mask.png");
+  mask-size: 85%;
+}
+
+.rack.grain {
+  background-color: #613839;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='92' viewBox='0 0 112 92'%3E%3Cg fill='%23000d2c' fill-opacity='0.23'%3E%3Cpath fill-rule='evenodd' d='M72 10H40L16 20H0v8h16l24-14h32l24 14h16v-8H96L72 10zm0-8H40L16 4H0v8h16l24-6h32l24 6h16V4H96L72 2zm0 84H40l-24-6H0v8h16l24 2h32l24-2h16v-8H96l-24 6zm0-8H40L16 64H0v8h16l24 10h32l24-10h16v-8H96L72 78zm0-12H40L16 56H0v4h16l24 14h32l24-14h16v-4H96L72 66zm0-16H40l-24-2H0v4h16l24 6h32l24-6h16v-4H96l-24 2zm0-16H40l-24 6H0v4h16l24-2h32l24 2h16v-4H96l-24-6zm0-16H40L16 32H0v4h16l24-10h32l24 10h16v-4H96L72 18z'/%3E%3C/g%3E%3C/svg%3E");
+  filter: contrast(110%) brightness(110%);
+}
+
+.rack.grain:after {
+  background-image: url("../asset/grain-texture.svg");
+  background-size: cover;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  opacity: .1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
