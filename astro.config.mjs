@@ -8,7 +8,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sina.github.io',
+  //site: 'https://sina.github.io',
+  site: 'https://blog.thxsina.com',
   base: '/seen',
   integrations: [mdx(), sitemap(), react()],
 
