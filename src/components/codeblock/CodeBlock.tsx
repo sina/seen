@@ -47,7 +47,7 @@ const generateLineNumbers = (code: string, dimensions: Dimensions) => {
       { thumbnail &&
         <div className="code-block-thumb-container float-right max-w-[30%]">
           <div className="code-title rounded-t-lg py-1 px-3 italic text-sm opacity-85">{title}</div>
-          <img src={thumbnail} className="border-light-steel-blue border-2 !rounded-t-none" />
+          <img src={`${import.meta.env.BASE_URL}${thumbnail}`} className="border-light-steel-blue border-2 !rounded-t-none" />
         </div>
       }
       

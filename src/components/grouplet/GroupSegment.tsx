@@ -40,7 +40,7 @@ const GroupSegment = ({ index, data }: Props) => {
       <div className="icon">
         {
           data.organizationLogo
-          ? <img src={data.organizationLogo} alt="" className="image border w-8 h-8" title={data.organization}/>
+          ? <img src={`${import.meta.env.BASE_URL}${data.organizationLogo}`} alt="" className="image border w-8 h-8" title={data.organization}/>
           : <span className={`text-2xl image border ${randomFilterClass()}`} title={data.organization}>{data.iconEmoji ? data.iconEmoji : randomEmoji()}</span>
         }
       </div>
@@ -49,10 +49,10 @@ const GroupSegment = ({ index, data }: Props) => {
         <span className="line"></span>
         <span className="midpoint center-mark"></span>
       </div>
-      <div className="title" onClick={() => {handleClickDetail(data.detailPage)}}>
+      <div className="title" onClick={() => {handleClickDetail(`${import.meta.env.BASE_URL}${data.detailPage}`)}}>
         {
           data.imageScreenshots && 
-            <img key={`sh-${index}`} src={data.imageScreenshots[0]} alt="" className="image w-16 !h-16 mx-auto drop-shadow-[0_2px_1px_black] float-left" title={data.organization}/>
+            <img key={`sh-${index}`} src={`${import.meta.env.BASE_URL}${data.imageScreenshots[0]}`} alt="" className="image w-16 !h-16 mx-auto drop-shadow-[0_2px_1px_black] float-left" title={data.organization}/>
         }
         <span className="detail" title={data.title}>{data.title}</span>
         <br/>

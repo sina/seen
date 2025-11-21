@@ -19,7 +19,7 @@ const {imageScreenshots: detailImages, organization, stackHighlights, title: pag
   </div>
   <div class="text-center m-8">
     {detailImages && detailImages.map((entry: string, index: number) => (
-      <Image width={400} height={200} src={entry} alt="" class="mx-auto zoom-detail border-steel-blue-faded border-2 mb-4"/>
+      <Image width={400} height={200} src={`${import.meta.env.BASE_URL}${entry}`} alt="" class="mx-auto zoom-detail border-steel-blue-faded border-2 mb-4"/>
     ))}
 
   </div>

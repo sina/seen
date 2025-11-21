@@ -127,7 +127,7 @@ const Grouplet = ({ list, columnSettings }: Props) => {
     if (poolClicks > 0 && poolClicks % UNLOCK_COUNT === 0) {
       const audioClip = randomListItem(POOL_AUDIO.unlocks);
       playAudio(unlockSounds, audioClip.startTime, audioClip.stopTime);
-      window.open(`/eggs/${audioClip.label}`, 'egg');
+      window.open(`${import.meta.env.BASE_URL}/eggs/${audioClip.label}`, 'egg');
     } else {
       const audioClip = randomListItem(POOL_AUDIO.breaks);
       playAudio(poolSounds, audioClip.startTime, audioClip.stopTime);

@@ -1,5 +1,3 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
 export const NOW = new Date();
 export const SITE_COPY = 'sina bakhtiari';
 export const SITE_TITLE = 'seen';
@@ -9,13 +7,9 @@ export const ASTRO_ASSET_PATH = '../assets';
 
 
 export const HEADER_LINKS = [
-  {'label': 'thoughts', 'url': '/thoughts'},
-  {'label': 'work', 'url': '/work'}
+  {'label': 'thoughts', 'url': `${import.meta.env.BASE_URL}/thoughts`},
+  {'label': 'work', 'url': `${import.meta.env.BASE_URL}/work`}
 ];
-
-export const LINKS = {
-  'billiard-info': '/sample-billiards'
-};
 
 export const openInNewTab = (url: string) => {
   const newTab = window.open(url, '_blank', 'noopener,noreferrer');

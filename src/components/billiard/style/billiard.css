@@ -35,6 +35,14 @@
   );
 }
 
+@font-face {
+	font-family: 'engplot';
+  font-display: swap;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../asset/engplot.woff') format('woff');
+}
+
 .billiard {
   aspect-ratio: 1/1;
   background-color: var(--color-white);

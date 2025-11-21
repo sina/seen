@@ -5,7 +5,7 @@ const { id, data, classNames, emojiFilterClass } = Astro.props;
 ---
 
 <li class={classNames}>
-  <a href={`/thoughts/${id}/`} class="inline-block w-[100%] hover:underline">
+  <a href={`${import.meta.env.BASE_URL}/thoughts/${id}/`} class="inline-block w-[100%] hover:underline">
     {data.iconHero && (
       <img class={`float-left hover:shadow-md hover:shadow-gray-brown w-10 !h-10 inline-block ${emojiFilterClass}`} src={data.iconHero.src} alt="" />
     )}

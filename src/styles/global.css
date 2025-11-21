@@ -64,35 +64,11 @@
   --animate-pulse: fadepulse 2.5s linear infinite;
 }
 
-@font-face {
-	font-family: 'Atkinson';
-	font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Atkinson';
-  font-display: swap;
-	font-style: normal;
-	font-weight: 700;
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'engplot';
-  font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-	src: url('/fonts/engplot.woff') format('woff');
-}
-
 body {
   background: linear-gradient(var(--gradient-beige)) no-repeat;
   background-size: 100% 600px;
   color: rgb(var(--gray-dark));
-	font-family: 'Atkinson', sans-serif;
+	font-family: 'Atkinson Hyperlegible', sans-serif;
 	line-height: 1.7;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -259,7 +235,7 @@ nav a:hover {
 }
 
 .cursor-cue:hover {
-  cursor: url("/misc/cue01_64x64.svg") 50 8, pointer;
+  cursor: url("misc/cue01_64x64.svg") 50 8, pointer;
 } 
 
 /* work detail */

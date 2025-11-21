@@ -6,7 +6,7 @@ const { title = SITE_TITLE } = Astro.props;
 
 <header class="m-0 px-4 py-0 bg-white">
 	<nav class="flex justify-between items-center">
-		<h2 class="m-0 !text-[1em]"><a href="/" class="no-underline font-bold">{title}</a></h2>
+		<h2 class="m-0 !text-[1em]"><a href=`${import.meta.env.BASE_URL}/` class="no-underline font-bold">{title}</a></h2>
 		<div class="internal-links">
       {HEADER_LINKS.map((item) => (
         <HeaderLink href={item.url}>{item.label}</HeaderLink>
