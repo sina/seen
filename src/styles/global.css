@@ -235,7 +235,7 @@ nav a:hover {
 }
 
 .cursor-cue:hover {
-  cursor: url("misc/cue01_64x64.svg") 50 8, pointer;
+  cursor: url("../assets/misc/cue_64x64.svg") 50 8, pointer;
 } 
 
 /* work detail */
