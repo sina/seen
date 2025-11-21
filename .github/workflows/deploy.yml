@@ -20,9 +20,9 @@ jobs:
         uses: withastro/action@v5
         with:
           path: .
-          packageManager: pnpm@10.12.3
+          package-manager: pnpm@10.12.3
           build-cmd: pnpm run build
-          
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
