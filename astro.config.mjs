@@ -16,3 +16,16 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 });
+
+/*
+  For github page hosting with a custom domain
+
+  - add a CNAME record for preferred subdomain
+  - add redirects for www and root
+
+    CNAME     blog    sina.github.io            30m TTL
+    Redirect  www     http://blog.thxsina.com   Unmasked
+    Redirect  @       http://blog.thxsina.com   Unmasked
+    
+
+*/
