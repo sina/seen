@@ -1,4 +1,4 @@
-FROM node:20.19.0-bookworm-slim AS node
+FROM node:22.22.3-bookworm-slim AS node
 
 ARG USER_NAME
 ARG GROUP_NAME
