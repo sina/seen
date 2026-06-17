@@ -16,7 +16,10 @@ interface Settings {
   }
 }
 
-const works  = await getCollection('works');
+const works = (await getCollection('works')).sort(
+  (cur, next) => next.data.entryDate.valueOf() - cur.data.entryDate.valueOf()
+);
+
 const columnSettings: Settings[] = [
   {
     columns: 6,
