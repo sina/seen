@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import TagList from '../components/util/TagList.astro';
+import Modal from '../components/modal/Modal';
 import { closeTab } from '../consts';
 
 const { relatedData } = Astro.props;
@@ -19,7 +20,16 @@ const {imageScreenshots: detailImages, organization, stackHighlights, title: pag
   </div>
   <div class="text-center m-8">
     {detailImages && detailImages.map((entry: string, index: number) => (
-      <Image width={400} height={200} src={`${import.meta.env.BASE_URL}${entry}`} alt="" class="mx-auto zoom-detail border-steel-blue-faded border-2 mb-4"/>
+      <Image
+        id={`image-${index}`}
+        data-index={index}
+        width={400}
+        height={200}
+        src={`${import.meta.env.BASE_URL}${entry}`}
+        alt=""
+        class="image-preview mx-auto zoom-detail-bad border-steel-blue-faded border-2 mb-4 hover:cursor-pointer hover:opacity-75 duration-500"
+      />
+      <Modal src={`${import.meta.env.BASE_URL}${entry}`} id={`modal-${index}`} caption={page_title} client:load />
     ))}
 
   </div>
@@ -36,5 +46,13 @@ const {imageScreenshots: detailImages, organization, stackHighlights, title: pag
   const handler = ${closeTab};
   document.getElementById('back-button')?.addEventListener('click', () => {
     handler(window);
+  });
+
+  const imagePreviewList = document.querySelectorAll('.image-preview');
+  imagePreviewList.forEach(item => {
+    const ind = item.dataset.index;
+    item.addEventListener('click', () => {
+      document.getElementById('modal-'+ind).classList.remove('hidden');
+    });
   });
 `}/>
