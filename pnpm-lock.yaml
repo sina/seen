@@ -59,13 +59,13 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.3.7
-        version: 4.3.7(astro@6.4.7(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0))
+        version: 4.3.7(astro@6.4.8(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0))
       '@astrojs/react':
         specifier: ^5.0.7
         version: 5.0.7(@types/node@22.15.30)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(jiti@2.4.2)(lightningcss@1.32.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@astrojs/rss':
-        specifier: ^4.0.12
-        version: 4.0.12
+        specifier: ^4.0.18
+        version: 4.0.18
       '@astrojs/sitemap':
         specifier: ^3.6.0
         version: 3.6.0
@@ -79,8 +79,8 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
       astro:
-        specifier: '>=6.1.10'
-        version: 6.4.7(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0)
+        specifier: ^6.4.8
+        version: 6.4.8(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0)
       react:
         specifier: ^19.2.7
         version: 19.2.7
@@ -141,8 +141,8 @@ packages:
       react: ^17.0.2 || ^18.0.0 || ^19.0.0
       react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0
 
-  '@astrojs/rss@4.0.12':
-    resolution: {integrity: sha512-O5yyxHuDVb6DQ6VLOrbUVFSm+NpObulPxjs6XT9q3tC+RoKbN4HXMZLpv0LvXd1qdAjzVgJ1NFD+zKHJNDXikw==}
+  '@astrojs/rss@4.0.18':
+    resolution: {integrity: sha512-wc5DwKlbTEdgVAWnHy8krFTeQ42t1v/DJqeq5HtulYK3FYHE4krtRGjoyhS3eXXgfdV6Raoz2RU3wrMTFAitRg==}
 
   '@astrojs/sitemap@3.6.0':
     resolution: {integrity: sha512-4aHkvcOZBWJigRmMIAJwRQXBS+ayoP5z40OklTXYXhUDhwusz+DyDl+nSshY6y9DvkVEavwNcFO8FD81iGhXjg==}
@@ -945,8 +945,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@6.4.7:
-    resolution: {integrity: sha512-5vsXx0H52u23Jpshs9tM81D03Tb3Oh2Vt2Zo0bpqjXN+njkAWjFyGjTfmWJLAcrCQd9Q+iWB1eqfhR1sZJEaUA==}
+  astro@6.4.8:
+    resolution: {integrity: sha512-KK5lX90uU9EeVaTjINyj3sy9/NFXVa59aowaqbWBDDKLXZh4rr7GwIaCFYVetE22MJtsCNFerQXn0vlCLmpP/Q==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1086,6 +1086,10 @@ packages:
 
   detect-libc@2.0.4:
     resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==}
+    engines: {node: '>=8'}
+
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
   devalue@5.8.1:
@@ -2314,12 +2318,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.7(astro@6.4.7(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0))':
+  '@astrojs/mdx@4.3.7(astro@6.4.8(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.8
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 6.4.7(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0)
+      astro: 6.4.8(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2366,10 +2370,11 @@ snapshots:
       - tsx
       - yaml
 
-  '@astrojs/rss@4.0.12':
+  '@astrojs/rss@4.0.18':
     dependencies:
       fast-xml-parser: 5.9.0
-      kleur: 4.1.5
+      piccolore: 0.1.3
+      zod: 4.4.3
 
   '@astrojs/sitemap@3.6.0':
     dependencies:
@@ -3084,7 +3089,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@6.4.7(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0):
+  astro@6.4.8(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.32.0)(rollup@4.62.0):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0
@@ -3287,6 +3292,9 @@ snapshots:
   destr@2.0.5: {}
 
   detect-libc@2.0.4: {}
+
+  detect-libc@2.1.2:
+    optional: true
 
   devalue@5.8.1: {}
 
@@ -3745,7 +3753,7 @@ snapshots:
 
   lightningcss@1.32.0:
     dependencies:
-      detect-libc: 2.0.4
+      detect-libc: 2.1.2
     optionalDependencies:
       lightningcss-android-arm64: 1.32.0
       lightningcss-darwin-arm64: 1.32.0
